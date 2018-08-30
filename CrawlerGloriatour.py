@@ -12,11 +12,6 @@ self.main()
 '''
 
 class CrawlerGloriatour(BasedClass.Crawler):
-    
-    encoding = 'big5'
-    maxPageALL_url = 'https://www.gloriatour.com.tw/EW/GO/GroupList.asp'
-    index_data_url = 'https://www.gloriatour.com.tw/EW/Services/SearchListData.asp'
-    detail_data_url = 'https://www.gloriatour.com.tw/EW/GO/GroupDetail.asp?prodCd='
         
     def __init__(self):
         super(CrawlerGloriatour, self).__init__(

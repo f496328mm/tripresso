@@ -38,10 +38,6 @@ def execute_sql2(database,sql_text):
 class Crawler:
     
     def __init__(self,encoding,maxPageALL_url,index_data_url,detail_data_url):
-        #self.encoding = 'utf-8'
-        #self.maxPageALL_url = 'http://www.orangetour.com.tw/EW/GO/GroupList.asp'
-        #self.index_data_url = 'http://www.orangetour.com.tw/EW/Services/SearchListData.asp'
-        #self.detail_data_url = 'http://www.orangetour.com.tw/EW/GO/GroupDetail.asp?prodCd=' 
         self.encoding = encoding
         self.maxPageALL_url = maxPageALL_url
         self.index_data_url = index_data_url
