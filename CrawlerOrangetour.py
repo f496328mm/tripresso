@@ -11,32 +11,27 @@ self = CrawlerGloriatour()
 self.main()
 '''
 
-class CrawlerGloriatour(BasedClass.Crawler):
-    
-    encoding = 'big5'
-    maxPageALL_url = 'https://www.gloriatour.com.tw/EW/GO/GroupList.asp'
-    index_data_url = 'https://www.gloriatour.com.tw/EW/Services/SearchListData.asp'
-    detail_data_url = 'https://www.gloriatour.com.tw/EW/GO/GroupDetail.asp?prodCd='
+class CrawlerOrangetour(BasedClass.Crawler):
         
     def __init__(self):
-        super(CrawlerGloriatour, self).__init__(
-        encoding = 'big5',
-        maxPageALL_url = 'https://www.gloriatour.com.tw/EW/GO/GroupList.asp',
-        index_data_url = 'https://www.gloriatour.com.tw/EW/Services/SearchListData.asp',
-        detail_data_url = 'https://www.gloriatour.com.tw/EW/GO/GroupDetail.asp?prodCd=',)
+        super(CrawlerOrangetour, self).__init__(
+        encoding = 'utf-8',
+        maxPageALL_url = 'http://www.orangetour.com.tw/EW/GO/GroupList.asp',
+        index_data_url = 'http://www.orangetour.com.tw/EW/Services/SearchListData.asp',
+        detail_data_url = 'http://www.orangetour.com.tw/EW/GO/GroupDetail.asp?prodCd=' ,
+        )
         
 def crawler_history():
     
-    self = CrawlerGloriatour()
+    self = CrawlerOrangetour()
     print('get maxPageALL')
     self.get_maxPageALL()
     print('crawler')
     self.crawler()
     print('finish')
-
     #-----------------------------------------------------------------------
     print('create table')
-    C2S = BasedClass.Crawler2SQL('GloriatourData','tripresso')
+    C2S = BasedClass.Crawler2SQL('OrangetourData','tripresso')
     try:
         C2S.create_table(self.index_data.columns,
                          date_col = ['LeavDt'],
@@ -57,14 +52,14 @@ def crawler_history():
                    no_float_col = no_float_col
                    )
     #==================================================================
-    C2S = BasedClass.Crawler2SQL('GloriatourFlightData','tripresso')
+    C2S = BasedClass.Crawler2SQL('OrangetourFlightData','tripresso')
     try:
         C2S.create_table(self.flight_data.columns,
                          dt_col = ['DepartureTime','ArrivalTime'],
                          text_col = ['FlightCompany','Flight','Departure','Destination','GrupCd'],
                          INT_col = ['FlightDay'],
                          FOREIGNKEY = 'GrupCd',
-                         FOREIGNKEY_table = 'GloriatourData')
+                         FOREIGNKEY_table = 'OrangetourData')
     except:
         123
         
@@ -74,8 +69,8 @@ def crawler_history():
     C2S.upload2sql( self.flight_data,
                    INT_col = INT_col,
                    no_float_col = no_float_col )
-'''    
-class AutoCrawlerGloriatour(CrawlerGloriatour):
+'''         
+class AutoCrawlerGloriatour(CrawlerOrangetour):
     def __init__(self):
         super(AutoCrawlerGloriatour, self).__init__()    
         self.database = 'tripresso'
