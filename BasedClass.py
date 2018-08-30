@@ -127,10 +127,11 @@ class Crawler:
                 #soup = BeautifulSoup(res.text, "lxml")
                 
                 value = get_flight_value(res.text)
-                GrupCd = url.replace(tem,'')
-                value['GrupCd'] = GrupCd
-                #value['GrupCd_Flight'] = [ GrupCd + '-' + v for v in value[2] ]
-                flight_data = flight_data.append( value )
+                if len(value)>0 :
+                    GrupCd = url.replace(tem,'')
+                    value['GrupCd'] = GrupCd
+                    #value['GrupCd_Flight'] = [ GrupCd + '-' + v for v in value[2] ]
+                    flight_data = flight_data.append( value )
                 
         #----------------------------------------------------------------
             flight_data.columns = flight_colname
@@ -149,8 +150,8 @@ class Crawler:
     def crawler(self):
         
         self.index_data, self.flight_data = [pd.DataFrame() for i in range(2) ]
-        for i in range(1,int(self.maxPageALL)+1):# i = 1
-        #for i in range(1,3):# i = 2
+        #for i in range(1,int(self.maxPageALL)+1):# i = 7
+        for i in range(1,3):# i = 1
             print( str(i) + '/' + self.maxPageALL )
             v1, v2 = self.get_value(i)
             self.index_data = self.index_data.append(v1)
@@ -273,8 +274,8 @@ class Crawler2SQL:
                          charset="utf8") )             
         data.index = range(len(data))
         for i in range(len(data)):
-            if i%500 == 0:
-                print(str(i)+'/'+str(len(data)))
+            #if i%500 == 0:
+            print(str(i)+'/'+str(len(data)))
             #i = 0
             #upload_string = create_upload_string(data,self.dataset_name,i)
             value, upload_string =  create_upload_value(data,self.dataset_name,i)
