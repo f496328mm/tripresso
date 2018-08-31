@@ -134,8 +134,9 @@ class Crawler:
                     flight_data = flight_data.append( value )
                 
         #----------------------------------------------------------------
-            flight_data.columns = flight_colname
-            flight_data.index = range(len(flight_data))
+            if len(flight_data) > 0 :
+                flight_data.columns = flight_colname
+                flight_data.index = range(len(flight_data))
 
             #---------------------------------------------------------
             #detail_data = flight_data
@@ -151,10 +152,12 @@ class Crawler:
         
         self.index_data, self.flight_data = [pd.DataFrame() for i in range(2) ]
         for i in range(1,int(self.maxPageALL)+1):# i = 7
-        #for i in range(1,3):# i = 1
+        #for i in range(1,3):# i = 25
             print( str(i) + '/' + self.maxPageALL )
             v1, v2 = self.get_value(i)
+            if len(v1) > 0 :
             self.index_data = self.index_data.append(v1)
+            if len(v2) > 0 :
             self.flight_data = self.flight_data.append(v2)
             
         self.index_data.index = range(len(self.index_data))
@@ -274,8 +277,8 @@ class Crawler2SQL:
                          charset="utf8") )             
         data.index = range(len(data))
         for i in range(len(data)):
-            #if i%500 == 0:
-            print(str(i)+'/'+str(len(data)))
+            if i%500 == 0:
+                print(str(i)+'/'+str(len(data)))
             #i = 0
             #upload_string = create_upload_string(data,self.dataset_name,i)
             value, upload_string =  create_upload_value(data,self.dataset_name,i)

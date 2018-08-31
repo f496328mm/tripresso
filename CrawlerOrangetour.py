@@ -39,7 +39,7 @@ def crawler_history():
                          INT_col = ['EstmTotqt','SaleYqt','SaleAm','GrupLn'],
                          PRIMARYKEY = 'GrupCd',
                          FOREIGNKEY = 'GrupCd',
-                         FOREIGNKEY_table = 'GloriatourFlightData')
+                         FOREIGNKEY_table = 'OrangetourFlightData')
     except:
         123
     #------------------------------------------------------------------    
