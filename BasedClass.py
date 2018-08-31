@@ -150,8 +150,8 @@ class Crawler:
     def crawler(self):
         
         self.index_data, self.flight_data = [pd.DataFrame() for i in range(2) ]
-        #for i in range(1,int(self.maxPageALL)+1):# i = 7
-        for i in range(1,3):# i = 1
+        for i in range(1,int(self.maxPageALL)+1):# i = 7
+        #for i in range(1,3):# i = 1
             print( str(i) + '/' + self.maxPageALL )
             v1, v2 = self.get_value(i)
             self.index_data = self.index_data.append(v1)
