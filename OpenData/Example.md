@@ -4,7 +4,7 @@
       GloriatourData = Load(data_name = 'GloriatourData')
         
 -----------------------------------------------------------------
-### Load GloriatourFlightData'
+### Load GloriatourFlightData
       from tripresso.OpenData.Load import Load
 
       GloriatourFlightData = Load(data_name = 'GloriatourFlightData')
