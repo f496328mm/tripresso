@@ -156,9 +156,9 @@ class Crawler:
             print( str(i) + '/' + self.maxPageALL )
             v1, v2 = self.get_value(i)
             if len(v1) > 0 :
-            self.index_data = self.index_data.append(v1)
+                self.index_data = self.index_data.append(v1)
             if len(v2) > 0 :
-            self.flight_data = self.flight_data.append(v2)
+                self.flight_data = self.flight_data.append(v2)
             
         self.index_data.index = range(len(self.index_data))
         self.flight_data.index = range(len(self.flight_data))
