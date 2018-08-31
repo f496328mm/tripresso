@@ -1,5 +1,4 @@
 # tripresso
-tripresso
 
 對以下旅遊業進行爬蟲，並製作 api 提供存取
 
