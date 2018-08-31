@@ -6,7 +6,7 @@ user : guest <br>
 password : 123 <br>--->
 
 * ### [Parameters](https://github.com/f496328mm/FinancialMining/blob/master/OpenData/Parameters.md)<br>
-  * [database](https://github.com/f496328mm/FinancialMining/blob/master/OpenData/Parameters.md#database---stockinfo-stockprice-)
+  * [data_name](https://github.com/f496328mm/tripresso/blob/master/OpenData/Parameters.md#data_name--gloriatourdata-gloriatourflightdata-orangetourdata-orangetourflightdata)
   
 * ### [Load Example](https://github.com/f496328mm/FinancialMining/blob/master/OpenData/Example.md)<br>
   * [GloriatourData](https://github.com/f496328mm/tripresso/blob/master/OpenData/Example.md#load-gloriatourdata)
