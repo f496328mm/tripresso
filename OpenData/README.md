@@ -15,7 +15,10 @@ password : 123 <br>--->
   * [OrangetourFlightData](https://github.com/f496328mm/tripresso/blob/master/OpenData/Example.md#load-orangetourflightdata)
 
 * ### [Variable Introduction](https://github.com/f496328mm/tripresso/blob/master/OpenData/VariableIntroduction.md)
-  * [Taiwan Stock Info](https://github.com/f496328mm/tripresso/blob/master/OpenData/Example.md#load-gloriatourdata)
+  * [GloriatourData](https://github.com/f496328mm/tripresso/blob/master/OpenData/VariableIntroduction.md#1-gloriatourdata)
+  * [GloriatourFlightData](https://github.com/f496328mm/tripresso/blob/master/OpenData/VariableIntroduction.md#2-gloriatourflightdata)
+  * [OrangetourData](https://github.com/f496328mm/tripresso/blob/master/OpenData/VariableIntroduction.md#3-orangetourdata)
+  * [OrangetourFlightData](https://github.com/f496328mm/tripresso/blob/master/OpenData/VariableIntroduction.md#4-orangetourflightdata)
 
 
 
