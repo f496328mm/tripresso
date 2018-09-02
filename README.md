@@ -9,10 +9,10 @@ https://www.gloriatour.com.tw/EW/GO/GroupList.asp
 http://www.orangetour.com.tw/EW/GO/GroupList.asp
 
 ### [ Open Data ](https://github.com/f496328mm/tripresso/tree/master/OpenData)
-    1. GloriatourData
-    2. GloriatourFlightData
-    3. OrangetourData
-    4. OrangetourFlightData
+* GloriatourData
+* GloriatourFlightData
+* OrangetourData
+* OrangetourFlightData
 
 ### [ Crawler Code ](https://github.com/f496328mm/tripresso/tree/master/CrawlerCode)
 * [CrawlerGloriatour.py](https://github.com/f496328mm/tripresso/blob/master/CrawlerCode/CrawlerGloriatour.py)
